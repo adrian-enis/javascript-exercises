@@ -1,10 +1,12 @@
-/**Escribe una función que determine si un número es capicúa */
-{
-  function capicúa(num){
-    let strNum = num.toString()
-    let strNumInverted = strNum.split("").reverse().join("")
-    return strNum === strNumInverted
-  }
+/**Escribe una función que determine si una palabra es capicúa */
 
-  console.log(capicúa("oso"))
+function polindromo(str){
+  if(typeof str !== "string"){
+  throw new Error("Debes introducir un string")
+    
+  }
+  let word = str.split("").reverse().join("")
+  return str == word
 }
+
+console.log(polindromo("hola"))
