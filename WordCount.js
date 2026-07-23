@@ -1,29 +1,46 @@
 /*
 Enunciado: dada una palabra, buscarla en una frase y devolver cuantas veces se repite.
 
-1.- Una funcion que recibe 2 parametros, frase, palabra
-2.- Un inciador que inicia en 0, aqui se guarda cuantas
-	veces aparece la palabra
-3.- Dividir la frase en una lista
-4.- Recorrer la lista con un bucle
-5.- verificar si las palabras de la lista es igual a la palabra_buscar
-6.- si la palabra de la lista es igual a la palabra_buscar, sumar 1 al contador
-7.- devolver el valor final
+Que te piden?
+
+1.-Una frase y buscar las palabras repetidas en ella.
+
+Como logro buscar palabras repetidas?
+
+2.-obtener la frase y separarlas
+
+3.-Contar cuales palabras se repiten y cuales no
+
+4.-Pasar la frase a minusculas para que no se distingan de las mayusculas
+
+Eliminar signos para que las palabras enten limpias
+
+5.-devolver la frase separada con las palabras repetidas o contadas
 */
 
 
 //1.-
-function countWord(frase, palabra_buscar){
+
+function countWord(frase, palabra_buscada){
+    // 1. Iniciamos el contador
     let contador = 0;
-    const listFrase = frase.split(" ");
+    
+    // 2. Limpiamos: minúsculas -> quitamos símbolos -> cortamos en lista
+    // (Asegúrate de limpiar también palabra_buscada por si viene en mayúsculas)
+    const palabraLimpia = palabra_buscada.toLowerCase();
+    const listaPalabras = frase.toLowerCase().replace(/[^a-z0-9\s]/gi, "").split(" ");
 
-    for(let i = 0; i< listFrase.length; i++ ){
-        if(listFrase[i] === palabra_buscar){
-            contador++    
-        } 
+    // 3. Recorremos la lista palabra por palabra
+    for (const palabraActual of listaPalabras) {
+        // 4. Preguntamos: ¿La palabra actual de la lista es la que busco?
+        if (palabraActual === palabraLimpia) {
+            contador++; // Sumamos 1 si coinciden
+        }
     }
-
-    return contador
+    
+    // 5. Devolvemos el resultado final
+    return contador;
 }
 
-console.log(countWord("el perro corre con el gato", "el"))
+// Prueba:
+console.log(countWord("¡Hola! Hola a todos, hola.", "hola")); // Devuelve 3
