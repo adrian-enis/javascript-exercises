@@ -6,16 +6,13 @@ Que te piden?
 1.-Una frase y buscar las palabras repetidas en ella.
 
 Como logro buscar palabras repetidas?
-
-2.-obtener la frase y separarlas
-
-3.-Contar cuales palabras se repiten y cuales no
-
-4.-Pasar la frase a minusculas para que no se distingan de las mayusculas
-
-Eliminar signos para que las palabras enten limpias
-
-5.-devolver la frase separada con las palabras repetidas o contadas
+2.- Iniciar un contador en 0.
+3.-obtener la frase y limpiamos minusculas, simbolos y separamos la frase en lista
+4.- la palabra_buscada, solo la limpiamos a minusculas
+5.- Recorrer la lista (la que separamos en el punto 2.-), agregamos o instanciamos una nueva variable
+que se encargara de recorrer la frase en lista, pero ademas, iremos comparando si la nueva
+variable es igual a la palabra buscada, en tal caso, sumamos el contador
+6.- retornar el resultado
 */
 
 
