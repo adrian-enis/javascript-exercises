@@ -4,18 +4,19 @@ ejem: (1,100) = 50
 * */
 
 function evenNum(num1,num2){
-    let total = num2-num1; //formula
+
+    let inicio = Math.min(num1,num2);
+    let final = Math.max(num1,num2);
+    let total = final - inicio + 1;
     let resultado;
-    if(num1 % 2 !== 0 && num2 % 2 !== 0){
-        resultado = Math.floor(total / 2);
+
+    if(inicio % 2 !== 0 && final % 2 !== 0){
+        resultado = (total / 2) + 1;
     }else{
-        resultado = Math.floor(total / 2)
+        resultado = (total / 2);
     }
-
     return resultado
-
 }
 
-console.log(evenNum(1,100))
-
+console.log(evenNum(1,3866))
 //Mañana hacer el otro metodo
