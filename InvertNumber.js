@@ -18,3 +18,4 @@ function invertNumber(num) {
 }
 
 console.log(invertNumber(123456)) //output 654321
+  

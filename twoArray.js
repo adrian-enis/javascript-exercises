@@ -26,4 +26,4 @@ function elementRepeat(arr1, arr2){
     return resultRepeat
 }
 console.log(elementRepeat(1,2,3,4,5))
-//terminar de pulir mañana
+//terminar de pulir mañana  
