@@ -27,7 +27,7 @@ function countWord(frase, palabra_buscada){
     const palabraLimpia = palabra_buscada.toLowerCase();
     const listaPalabras = frase.toLowerCase().replace(/[^a-z0-9\s]/gi, "").split(" ");
 
-    // 3. Recorremos la lista palabra por palabra
+    // 3. Recorremos la lista palabra por palabra                                                                              
     for (const palabraActual of listaPalabras) {
         // 4. Preguntamos: ¿La palabra actual de la lista es la que busco?
         if (palabraActual === palabraLimpia) {
