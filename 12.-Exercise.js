@@ -2,7 +2,7 @@
 ese hasta 0, de 8 en 8 en una lista con guiones y cada numero debe tener un n° */
 
 function mostrarDe8en8(num){
-    let resultado = "";
+    let resultado = "" ;
 
     for(let i = num; i >= 0; i -= 8){
         resultado += `- nº ${i}\n`
