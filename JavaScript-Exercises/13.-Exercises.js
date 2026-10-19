@@ -17,6 +17,6 @@ function dividirArrays(array,indicador){
     return resultado
 }
 
-console.log(dividirArrays([1, 2, 3, 4], 10));
+console.log(dividirArrays([1, 2, 3, 4], 2));
 
 
